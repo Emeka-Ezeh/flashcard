@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [@flipCard]="flipped ? 'flipped' : 'default'" (click)="toggleFlip()">
   <div class="front" *ngIf="!flipped">
 
     {{ flashcards[currentIndex]?.question}}
@@ -10,3 +10,5 @@
 </div>
 
 <button (click)="nextCard()">Next</button>
+
+<div *ngIf="flashcards.length === 0">No flashcards yet. Add some!</div>

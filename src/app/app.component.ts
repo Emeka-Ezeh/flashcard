@@ -6,7 +6,7 @@ import { Flashcard } from './models/flashcard.model';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ FlashcardEditorComponent],
+  imports: [ FlashcardEditorComponent, FlashcardViewerComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
