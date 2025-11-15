@@ -1,0 +1,7 @@
+<p>flashcard-editor works!</p>
+
+<form [formGroup]="cardForm" (ngSubmit)="submit()">
+<input type="text" placeholder="Question" formControlName="question">
+<input type="text" placeholder="Answer" formControlName="answer">
+<button type="submit">Add Flashcard</button>
+</form>
