@@ -1,1 +1,12 @@
-<p>flashcard-viewer works!</p>
+<div class="card">
+  <div class="front" *ngIf="!flipped">
+
+    {{ flashcards[currentIndex]?.question}}
+  </div>
+    <div class="back" *ngIf="flipped">
+{{ flashcards[currentIndex]?.answer}}
+
+    </div>
+</div>
+
+<button (click)="nextCard()">Next</button>

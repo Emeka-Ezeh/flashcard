@@ -18,11 +18,9 @@ export class AppComponent {
   nextId = 1;
 
   addCard(card: { question: string; answer: string }) {
-    const newFlashcard: Flashcard = {
+    this.flashcards.push({
       id: this.nextId++,
-      question: card.question,
-      answer: card.answer
-    };
-    this.flashcards.push(newFlashcard);
+      ...card
+    })
   }
 }
