@@ -1,0 +1,9 @@
+<h3>Select a Deck</h3>
+<ul>
+  <li *ngFor="let deck of decks">
+    <button (click)="selectDeck.emit(deck)">{{ deck.name }}</button>
+  </li>
+</ul>
+
+<input [(ngModel)]="newDeckName" placeholder="New deck name">
+<button (click)="addDeck()">Create Deck</button>

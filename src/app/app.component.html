@@ -1,5 +1,13 @@
 
+<app-deck-selector
+[decks]="decks"
+(selectDeck)="selectDeck($event)"
+(createDeck)="createDeck($event)">
+</app-deck-selector>
 
-
+<div *ngIf="selectedDeck">
+  <h2>Selected Deck: {{ selectedDeck!.name }}</h2>
 <app-flashcard-editor (addFlashcard)="addCard($event)"></app-flashcard-editor>
-<app-flashcard-viewer [flashcards]="flashcards"></app-flashcard-viewer>
+<app-flashcard-viewer [flashcards]="selectedDeck!.cards"></app-flashcard-viewer>
+<app-quiz-mode [flashcards]="selectedDeck!.cards"></app-quiz-mode>
+</div>
